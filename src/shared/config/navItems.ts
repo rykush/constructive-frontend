@@ -1,27 +1,22 @@
-import chat from '@/icons/chat.svg'
-import chatActive from '@/icons/chat-active.svg'
-import users from '@/icons/users.svg'
-import usersActive from '@/icons/users-active.svg'
-import settings from '@/icons/settings.svg'
-import settingsActive from '@/icons/settings-active.svg'
+const base = import.meta.env.BASE_URL;
 
 export const navItems = [
   {
     key: "chats",
     label: "Чаты",
-    icon: chat,
-    activeIcon: chatActive,
+    icon: `${base}icons/chat.svg`,
+    activeIcon: `${base}icons/chat-active.svg`,
   },
   {
     key: "contacts",
     label: "Контакты",
-    icon: users,
-    activeIcon: usersActive,
+    icon: `${base}icons/users.svg`,
+    activeIcon: `${base}icons/users-active.svg`,
   },
   {
     key: "settings",
     label: "Настройки",
-    icon: settings,
-    activeIcon: settingsActive,
+    icon: `${base}icons/settings.svg`,
+    activeIcon: `${base}icons/settings-active.svg`,
   },
 ] as const;

@@ -253,18 +253,33 @@ export const ChatList = ({
   }, [messages]);
 
   const getAvatarPath = useCallback((dialog: AppDialog) => {
+    const fallbackAvatar = `${import.meta.env.BASE_URL}images/avatar.png`;
+
     if (dialog.customPhoto) return dialog.customPhoto;
+
     if (dialog.attachment_id) {
-      return attachments.find((attachment) => attachment.attachment_id === dialog.attachment_id)?.attachment_path ?? "/images/avatar.png";
+      return (
+        attachments.find((attachment) => attachment.attachment_id === dialog.attachment_id)?.attachment_path ??
+        fallbackAvatar
+      );
     }
+
     if (dialog.kind === "direct") {
-      const otherUser = users.find((user) => dialog.user_ids.includes(user.user_id) && user.user_id !== currentUserId);
+      const otherUser = users.find(
+        (user) => dialog.user_ids.includes(user.user_id) && user.user_id !== currentUserId
+      );
+
       if (otherUser?.avatar) return otherUser.avatar;
+
       if (otherUser?.attachment_id) {
-        return attachments.find((attachment) => attachment.attachment_id === otherUser.attachment_id)?.attachment_path ?? "/images/avatar.png";
+        return (
+          attachments.find((attachment) => attachment.attachment_id === otherUser.attachment_id)?.attachment_path ??
+          fallbackAvatar
+        );
       }
     }
-    return "/images/avatar.png";
+
+    return fallbackAvatar;
   }, [attachments, currentUserId, users]);
 
   const getOtherUser = useCallback((dialog: AppDialog) => {

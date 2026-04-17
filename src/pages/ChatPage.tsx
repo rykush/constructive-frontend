@@ -931,7 +931,7 @@ export const ChatPage = () => {
             <div className="chat-empty-glow chat-empty-glow-primary" />
             <div className="chat-empty-glow chat-empty-glow-secondary" />
             <div className="chat-empty-card">
-              <span className="chat-empty-kicker">Конструктивный/Оптимальный мессенджер</span>
+              <span className="chat-empty-kicker">Конструктив мессенджер</span>
               <h2>Выберите чат</h2>
               <p>Откройте диалог слева, начните новый чат через поиск или создайте группу в настройках.</p>
             </div>
