@@ -1,0 +1,9 @@
+[
+  {
+    "dialog_id": 1,
+    "dialog_name": "Ilya",
+    "user_ids": [1, 2],
+    "pinned": [1],
+    "attachment_id": null
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "message_id": 1,
+    "dialog_id": 1,
+    "user_id": 1,
+    "message_text": "Привет!",
+    "message_status": "viewed",
+    "attachment_id": null,
+    "created_at": "2026-04-08T12:00:00Z"
+  },
+  {
+    "message_id": 2,
+    "dialog_id": 1,
+    "user_id": 2,
+    "message_text": "Привет 👋",
+    "message_status": "not_viewed",
+    "attachment_id": null,
+    "created_at": "2026-04-08T12:01:00Z"
+  }
+]

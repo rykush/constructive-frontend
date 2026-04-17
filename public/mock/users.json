@@ -1,0 +1,18 @@
+[
+  {
+    "user_id": 1,
+    "nickname": "Kirill",
+    "username": "rykush_dev",
+    "user_status": "online",
+    "friends_ids": [2],
+    "attachment_id": 1
+  },
+  {
+    "user_id": 2,
+    "nickname": "Ilya",
+    "username": "Zelarat_dev",
+    "user_status": "offline",
+    "friends_ids": [1],
+    "attachment_id": null
+  }
+]
